@@ -1,14 +1,18 @@
+plugins {
+    id "dev.ghast.dex2jar"
+}
+
 description = 'Dex Tools'
 apply plugin:'application'
 
 mainClassName="com.googlecode.dex2jar.tools.BaseCmd"
 
 dependencies {
-  compile project(':dex-translator')
-  compile project(':d2j-smali')
-  compile project(':d2j-jasmin')
-  compile project(':dex-writer')
-  compile project(':d2j-base-cmd')
+    implementation project(':dex-translator')
+    implementation project(':d2j-smali')
+    implementation project(':d2j-jasmin')
+    implementation project(':dex-writer')
+    implementation project(':d2j-base-cmd')
     implementation group: 'org.ow2.asm', name: 'asm-tree', version: '9.5'
     implementation group: 'org.ow2.asm', name: 'asm-util', version: '9.5'
     implementation group: 'org.ow2.asm', name: 'asm-commons', version: '9.5'

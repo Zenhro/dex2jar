@@ -1,6 +1,10 @@
+plugins {
+  id "dev.ghast.dex2jar"
+}
+
 description = 'Dex Translator'
 
 dependencies {
-  compile project(':dex-reader-api')
+  implementation project(':dex-reader-api')
 }
 
